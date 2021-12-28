@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>info system</title>
-        <link rel="stylesheet" href="https://mipoung.github.io/info-system2/style.css">
+        <link rel="stylesheet" href="style.css">
 
     </head>
 
@@ -21,6 +21,19 @@
     <div id="map">
     <h2>지도</h2>
         이곳에는 카카오 맵을 띄울 예정
+        <div id="map2" style="width:500px;height:400px;"></div>
+        <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=ceeda2c7aca65080f7eb77c61b54a4e3"></script>
+        <script>
+
+            var container = document.getElementById('map2'); //지도를 담을 영역의 DOM 레퍼런스
+            var options = { //지도를 생성할 때 필요한 기본 옵션
+                center: new kakao.maps.LatLng(33.450701, 126.570667), //지도의 중심좌표.
+                level: 3 //지도의 레벨(확대, 축소 정도)
+            };
+
+            var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
+
+        </script>
     
         </div>
     </div>  
