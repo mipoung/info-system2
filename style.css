@@ -8,7 +8,7 @@ h1 {
     display: grid;
     grid-template-columns: 200px 1fr;
 }
-#map {
+#mapa {
     padding-left: 50px;
 }
 ol {
