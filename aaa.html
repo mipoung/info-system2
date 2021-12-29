@@ -8,6 +8,14 @@
 </head>
 <body>
     <div id="map" style="width:750px;height:350px;"></div>
+            
+    <div id="map" style="width:100%;height:350px;"></div>
+    <div>
+                   <form onsubmit="searchPlaces(); return false;">
+                       검색 : <input type="text" value="도화" id="keyword" size="15"> 
+                       <button type="submit">검색하기</button> 
+                   </form>
+               </div>
 
 	<script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=ceeda2c7aca65080f7eb77c61b54a4e3"></script>
 	<script>
@@ -20,16 +28,7 @@
 
 		// 지도를 생성한다 
 		var map = new kakao.maps.Map(mapContainer, mapOption); 
-    </script>
         
-    <div id="map" style="width:100%;height:350px;"></div>
-    <div>
-                   <form onsubmit="searchPlaces(); return false;">
-                       검색 : <input type="text" value="도화" id="keyword" size="15"> 
-                       <button type="submit">검색하기</button> 
-                   </form>
-               </div>
-   <script>
    // 마커를 클릭하면 장소명을 표출할 인포윈도우 입니다
    var infowindow = new kakao.maps.InfoWindow({zIndex:1});
    
