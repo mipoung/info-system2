@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8"/>
-	<title>Kakao 지도 시작하기</title>
+	<title>단속구역 지도</title>
 	
 	<style>
 #container {overflow:hidden;height:300px;position:relative;}
@@ -229,21 +229,28 @@ function closeRoadview() {
     var position = marker.getPosition();
     toggleMapWrapper(true, position);
 }
-		
+	</script>	
 		
 	<!-- 선 표시 함수 -->
-	var polyline = new kakao.maps.Polyline({
+	<script>
+    var linePath = [
+    new kakao.maps.LatLng(33.452344169439975, 126.56878163224233),
+    new kakao.maps.LatLng(33.452739313807456, 126.5709308145358),
+    new kakao.maps.LatLng(33.45178067090639, 126.5726886938753) 
+];
+    var polyline = new kakao.maps.Polyline({
     	path: linePath, // 선을 구성하는 좌표배열 입니다
     	strokeWeight: 10, // 선의 두께 입니다
     	strokeColor: '#FFAE00', // 선의 색깔입니다
     	strokeOpacity: 0.7, // 선의 불투명도 입니다 1에서 0 사이의 값이며 0에 가까울수록 투명합니다
     	strokeStyle: 'solid' // 선의 스타일입니다
 	});
+    </script>
 
 // 지도에 선을 표시합니다 
 polyline.setMap(map);  
 		
-	</script>
+	
 	
 	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=APIKEY&libraries=LIBRARY"></script>
 	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=APIKEY&libraries=services"></script>
