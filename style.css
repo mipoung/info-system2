@@ -10,6 +10,7 @@ h1 {
 }
 #mapa {
     padding-left: 50px;
+    height: auto;
 }
 ol {
     border-right: 2px solid gray;
